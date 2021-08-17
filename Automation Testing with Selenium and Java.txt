@@ -7,7 +7,8 @@ Automation Testing
 
 
 2.	STLC - Software Testing Life Cycle?
-	The Software Testing Life Cycle (STLC) is a sequence of specific actions performed during the testing process to ensure that the software quality objectives are met. The STLC includes both verification and validation. ... It consists of a series of methodological activities to help certify your software product.
+	The Software Testing Life Cycle (STLC) is a sequence of specific actions performed during the testing process to ensure that the software quality objectives are met.
+	The STLC includes both verification and validation. ... It consists of a series of methodological activities to help certify your software product.
 	
 	7 Steps of STLC:-
 	requirement analysis
@@ -18,10 +19,10 @@ Automation Testing
 	test cycle closure
 
 3.	Testcase Design Techniques?
-	Error Guessing - Guess the possible scenario for encountering errors.
-	Equivalent Class Partitioning - partitioning a rnage of values into atleast 3 classes to minimize the tests scenarios.
+	Error Guessing - Guess the possible scenario for encountering bugs.
+	Equivalent Class Partitioning - partitioning a range of values into atleast 3 classes to minimize the tests scenarios.
 	Boundary Value Analysis - checking baoundry values of an inputs. like a-1, a , a+1
-	Decision Table Testing - making positive and negative test cases on the basis of the conditions.
+	Decision Table Testing - making positive and negative test cases on the basis decision making table w.r.t conditions .
 	State Transition Diagrams - making a transition diagram of flow.
 
 4. 	TestNG?
@@ -89,18 +90,18 @@ Automation Testing
 	
 8.	Page Object Model VS Page Factory
 	
-	Page Object Model										Page Factory
-	Finding web elements using By							Finding web elements using @FindBy
+	Page Object Model							Page Factory
+	Finding web elements using By						Finding web elements using @FindBy
 	POM does not provide lazy initialization				Page Factory does provide lazy initialization
 	Page Object Model is a design pattern					PageFactory is a class that provides the implementation of the Page Object Model design pattern
-	one needs to initialize every page object individually	all page objects are initialized by using the initElements() method
+	one needs to initialize every page object individually			all page objects are initialized by using the initElements() method
 
 9.	POM - Project Object Model?
 	A Project Object Model or POM is the fundamental unit of work in Maven. It is an XML file that contains information about the project and configuration details used by Maven to build the project. It contains default values for most projects
 
 10.	Maven?
 	It is a Build Tool. 
-	Maven is a build automation tool used primarily for Java projects. Maven can also be used to build and manage projects written in C#, Ruby, Scala, and other languages. ... Maven addresses two aspects of building software: how software is built, and its dependencies
+	Maven is a build automation tool used primarily for Java projects. Maven can also be used to build and manage projects written in C#, Ruby, Scala, and other languages. Maven addresses two aspects of building software: how software is built, and its dependencies
 
 11.	It is a principle/Methodology.
 	https://reqtest.com/testing-blog/agile-testing-principles-methods-advantages/
