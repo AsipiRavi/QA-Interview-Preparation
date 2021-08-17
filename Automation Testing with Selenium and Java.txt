@@ -1,0 +1,190 @@
+Automation Testing
+==================
+
+1.	What is Automation Testing?
+	Automation Testing or Test Automation is a software testing technique that performs using special automated testing software tools to execute a test case suite.
+	The automation testing software can also enter test data into the System Under Test, compare expected and actual results and generate detailed test reports.
+
+
+2.	STLC - Software Testing Life Cycle?
+	The Software Testing Life Cycle (STLC) is a sequence of specific actions performed during the testing process to ensure that the software quality objectives are met. The STLC includes both verification and validation. ... It consists of a series of methodological activities to help certify your software product.
+	
+	7 Steps of STLC:-
+	requirement analysis
+	test planning
+	test case development
+	environment setup
+	test execution
+	test cycle closure
+
+3.	Testcase Design Techniques?
+	Error Guessing - Guess the possible scenario for encountering errors.
+	Equivalent Class Partitioning - partitioning a rnage of values into atleast 3 classes to minimize the tests scenarios.
+	Boundary Value Analysis - checking baoundry values of an inputs. like a-1, a , a+1
+	Decision Table Testing - making positive and negative test cases on the basis of the conditions.
+	State Transition Diagrams - making a transition diagram of flow.
+
+4. 	TestNG?
+	TestNG in Selenium is a Java testing framework, inspired by JUnit and NUnit.
+	From simple unit testing to complex integrated testing, it is designed to simplify all our testing requirements such as functional testing, regression, end-to-end testing, and more.
+	
+5.	Annotations?
+	TestNG Annotations are used to control the next method to be executed in the test script. TestNG annotations are defined before every method in the test code. In case any method is not prefixed with annotations, it will be ignored and not be executed as part of the test code. To define them, methods need to be simply annotated with ‘@Test‘.
+	
+	Types of TestNG Annotations:
+	Below is the list of annotations that TestNG support in Selenium
+
+	BeforeSuite
+	BeforeTest
+	BeforeClass
+	BeforeMethod
+	Test Case
+	AfterMethod
+	AfterClass
+	AfterTest
+	AfterSuite
+	
+	Let’s explore how these methods work.
+
+	@BeforeMethod: This will be executed before every @test annotated method.
+	@AfterMethod: This will be executed after every @test annotated method.
+	@BeforeClass: This will be executed before first @Test method execution. It will be executed one only time throughout the test case.
+	@AfterClass: This will be executed after all test methods in the current class have been run
+	@BeforeTest: This will be executed before the first @Test annotated method. It can be executed multiple times before the test case.
+	@AfterTest: A method with this annotation will be executed when all @Test annotated methods complete the execution of those classes inside the <test> tag in the TestNG.xml file.
+	@BeforeSuite: It will run only once, before all tests in the suite are executed.
+	@AfterSuite: A method with this annotation will run once after the execution of all tests in the suite is complete.
+	@BeforeGroups: This method will run before the first test run of that specific group.
+	@AfterGroups: This method will run after all test methods of that group complete their execution.
+	
+6.	POM - Page Object Model Design?
+	Page Object Model, also known as POM, is a design pattern in Selenium that creates an object repository for storing all web elements. It is useful in reducing code duplication and improves test case maintenance.
+
+	In Page Object Model, consider each web page of an application as a class file. Each class file will contain only corresponding web page elements. Using these elements, testers can perform operations on the website under test.
+
+	Advantages of Page Object Model:-
+	
+	Helps with easy maintenance
+	Helps with reusing code
+	Readability and Reliability of scripts
+	
+7.	PageFactory Design?
+	Page Factory is a class provided by Selenium WebDriver to support Page Object Design patterns. In Page Factory, testers use @FindBy annotation. The initElements method is used to initialize web elements.
+
+	@FindBy: An annotation used in Page Factory to locate and declare web elements using different locators. Below is an example of declaring an element using @FindBy
+	@FindBy(id="elementId") WebElement element;
+	Similarly, one can use @FindBy with different location strategies to find web elements and perform actions on them. Below are locators that can be used:
+
+	ClassName
+	CSS
+	Name
+	Xpath
+	TagName
+	LinkText
+	PartialLinkText
+	
+	initElements(): initElements is a static method in Page Factory class. Using the initElements method, one can initialize all the web elements located by @FindBy annotation.
+	
+	lazy initialization: AjaxElementLocatorFactory is a lazy load concept in Page Factory. This is used to identify web elements only when they are used in any operation or activity. The timeout of a web element can be assigned to the object class with the help of the AjaxElementLocatorFactory.
+	
+8.	Page Object Model VS Page Factory
+	
+	Page Object Model										Page Factory
+	Finding web elements using By							Finding web elements using @FindBy
+	POM does not provide lazy initialization				Page Factory does provide lazy initialization
+	Page Object Model is a design pattern					PageFactory is a class that provides the implementation of the Page Object Model design pattern
+	one needs to initialize every page object individually	all page objects are initialized by using the initElements() method
+
+9.	POM - Project Object Model?
+	A Project Object Model or POM is the fundamental unit of work in Maven. It is an XML file that contains information about the project and configuration details used by Maven to build the project. It contains default values for most projects
+
+10.	Maven?
+	It is a Build Tool. 
+	Maven is a build automation tool used primarily for Java projects. Maven can also be used to build and manage projects written in C#, Ruby, Scala, and other languages. ... Maven addresses two aspects of building software: how software is built, and its dependencies
+
+11.	It is a principle/Methodology.
+	https://reqtest.com/testing-blog/agile-testing-principles-methods-advantages/
+	Agile testing is a software testing process that follows the principles of agile software development. Agile testing methodology aligns with iterative Development Methodology in which requirements develop gradually from customers and testing teams. The development is aligned with customer requirements.
+	Agile testing process is a continuous process rather than being sequential. The testing begins at the start of the project and there is ongoing integration between testing and development.  The common objective of agile development and testing is to achieve a high product quality.
+
+	
+12.	Agile Testing Methods
+	There are various agile testing methods as follows:
+
+	Behavior Driven Development (BDD)
+	Acceptance Test Driven Development (ATDD)
+	Exploratory Testing
+	
+13.	Behavior Driven Development (BDD)
+	Behavior Driven Development (BDD) improves communication amongst project stakeholders so that all members correctly understand each feature before the development process starts. There is continuous example-based communication between developers, testers, and business analysts.
+
+	The examples are called Scenarios which are written in a special format called Gherkin Given/When/Then syntax.  The scenarios hold information on how a given feature should behave in different situations with different input parameters. These are called “Executable Specifications” as it comprises of both specification and inputs to the automated tests.
+
+14.	Acceptance Test Driven Development (ATDD)
+	ATDD focuses on involving team members with different perspectives such as the customer, developer, and tester.  Three Amigos meetings are held to formulate acceptance tests incorporating perspectives of the customer, development, and testing.  The customer is focused on the problem that is to be solved, the development is focused on how the problem will be solved whereas the testing is focused on what could go wrong.  The acceptance tests are a representation of the user’s point of view and it describes how the system will function. It also helps to verify that the system functions as it is supposed to.  In some instances acceptance tests are automated.
+
+15. Exploratory Testing
+	In this type of testing, the test design and test execution phase go hand in hand. Exploratory testing emphasizes working software over comprehensive documentation. The individuals and interactions are more important than the process and tools. Customer collaboration holds greater value than contract negotiation.  Exploratory testing is more adaptable to changes. In this testers identify the functionality of an application by exploring the application. The testers try to learn the application, and design & execute the test plans according to their findings.
+
+16.	Advantages of Agile Testing Methodology
+	The benefits of the agile testing approach are as follows:
+
+	It saves time and money
+	Agile testing reduces documentation
+	It is flexible and highly adaptable to changes
+	It provides a way for receiving regular feedback from the end user
+	Better determination of issues through daily meetings
+
+	Test Plan for Agile QA
+	In agile testing, the test plan is written as well as updated for every release. A test plan in agile includes:
+	
+	Agile Testing Plan
+	The scope of the testing
+	Consolidating new functionalities to be tested
+	Types of testing/Levels of testing
+	Performance & load testing
+	Consideration of infrastructure
+	Risks Plan
+	Planning of resources
+	Deliverables & Milestones
+	
+	
+	Agile Testing Life Cycle
+	The agile testing life cycle includes the following 5 phases:
+
+	Impact assessment
+	Agile Testing Planning
+	Release Readiness
+	Daily Scrums
+	Test Agility Review
+	Agile Testing Life Cycle
+
+
+17.	Scrum?
+	It is a set of rules.
+	Scrum is a framework that helps teams work together.Often thought of as an agile project management framework, scrum describes a set of meetings, tools, and roles that work in concert to help teams structure and manage their work
+
+18.	Sprint?
+	it is an event in scrum.
+	Sprint planning is an event in scrum that kicks off the sprint. The purpose of sprint planning is to define what can be delivered in the sprint and how that work will be achieved. Sprint planning is done in collaboration with the whole scrum team. ... In scrum, the sprint is a set period of time where all the work is done
+	
+19.	Jira?
+	It is a collabration tool to track/log the activities like tasks,Requests,bugs etc. 
+	Jira is a software application used for issue tracking and project management. The tool, developed by the Australian software company Atlassian, has become widely used by agile development teams to track bugs, stories, epics, and other tasks
+
+
+CICD - Continuous Integration continuous Developement
+=====================================================
+1.	GIT?
+	It is local repository to store the changes before pushing  in to GITHUB 
+	Git is a version control system that lets you manage and keep track of your source code history. GitHub is a cloud-based hosting service that lets you manage Git repositories. If you have open-source projects that use Git, then GitHub is designed to help you better manage them.
+
+2. 	GITHUB?
+	It is a Global Repository, which is used as a version control tool.
+	GitHub is a cloud-based hosting service that lets you manage Git repositories.
+
+3.	JENKINS?
+	It is a CICD tool to Automate Integration and Deploymnet steps.
+	an open source automation server which enables developers around the world to reliably build, test, and deploy their software.
+	
+	
